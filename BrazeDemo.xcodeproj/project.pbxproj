@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		A77DCAC726FD45DB005FC7BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A77DCAC526FD45DB005FC7BD /* Main.storyboard */; };
 		A77DCAC926FD45DD005FC7BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A77DCAC826FD45DD005FC7BD /* Assets.xcassets */; };
 		A77DCACC26FD45DD005FC7BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A77DCACA26FD45DD005FC7BD /* LaunchScreen.storyboard */; };
+		A77DCAD526FD46BD005FC7BD /* AppboyKit in Frameworks */ = {isa = PBXBuildFile; productRef = A77DCAD426FD46BD005FC7BD /* AppboyKit */; };
+		A77DCADE26FD46DF005FC7BD /* AppboyContentCardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77DCADB26FD46DF005FC7BD /* AppboyContentCardData.swift */; };
+		A77DCADF26FD46DF005FC7BD /* AppboyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77DCADC26FD46DF005FC7BD /* AppboyHelper.swift */; };
+		A77DCAE026FD46DF005FC7BD /* AppboyHelper+ContentCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77DCADD26FD46DF005FC7BD /* AppboyHelper+ContentCards.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,9 @@
 		A77DCAC826FD45DD005FC7BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A77DCACB26FD45DD005FC7BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A77DCACD26FD45DD005FC7BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A77DCADB26FD46DF005FC7BD /* AppboyContentCardData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppboyContentCardData.swift; sourceTree = "<group>"; };
+		A77DCADC26FD46DF005FC7BD /* AppboyHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppboyHelper.swift; sourceTree = "<group>"; };
+		A77DCADD26FD46DF005FC7BD /* AppboyHelper+ContentCards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppboyHelper+ContentCards.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A77DCAD526FD46BD005FC7BD /* AppboyKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +64,7 @@
 		A77DCABE26FD45DB005FC7BD /* BrazeDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A77DCADA26FD46CD005FC7BD /* AppboyHelper */,
 				A77DCABF26FD45DB005FC7BD /* AppDelegate.swift */,
 				A77DCAC126FD45DB005FC7BD /* SceneDelegate.swift */,
 				A77DCAC326FD45DB005FC7BD /* ViewController.swift */,
@@ -65,6 +74,16 @@
 				A77DCACD26FD45DD005FC7BD /* Info.plist */,
 			);
 			path = BrazeDemo;
+			sourceTree = "<group>";
+		};
+		A77DCADA26FD46CD005FC7BD /* AppboyHelper */ = {
+			isa = PBXGroup;
+			children = (
+				A77DCADB26FD46DF005FC7BD /* AppboyContentCardData.swift */,
+				A77DCADC26FD46DF005FC7BD /* AppboyHelper.swift */,
+				A77DCADD26FD46DF005FC7BD /* AppboyHelper+ContentCards.swift */,
+			);
+			path = AppboyHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +102,9 @@
 			dependencies = (
 			);
 			name = BrazeDemo;
+			packageProductDependencies = (
+				A77DCAD426FD46BD005FC7BD /* AppboyKit */,
+			);
 			productName = BrazeDemo;
 			productReference = A77DCABC26FD45DB005FC7BD /* BrazeDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +132,9 @@
 				Base,
 			);
 			mainGroup = A77DCAB326FD45DB005FC7BD;
+			packageReferences = (
+				A77DCAD326FD46BD005FC7BD /* XCRemoteSwiftPackageReference "braze-ios-sdk" */,
+			);
 			productRefGroup = A77DCABD26FD45DB005FC7BD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +162,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A77DCADE26FD46DF005FC7BD /* AppboyContentCardData.swift in Sources */,
 				A77DCAC426FD45DB005FC7BD /* ViewController.swift in Sources */,
 				A77DCAC026FD45DB005FC7BD /* AppDelegate.swift in Sources */,
+				A77DCADF26FD46DF005FC7BD /* AppboyHelper.swift in Sources */,
+				A77DCAE026FD46DF005FC7BD /* AppboyHelper+ContentCards.swift in Sources */,
 				A77DCAC226FD45DB005FC7BD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,6 +320,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leonardo.ferreira.BrazeDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -310,6 +339,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leonardo.ferreira.BrazeDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -339,6 +369,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A77DCAD326FD46BD005FC7BD /* XCRemoteSwiftPackageReference "braze-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/braze-inc/braze-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A77DCAD426FD46BD005FC7BD /* AppboyKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A77DCAD326FD46BD005FC7BD /* XCRemoteSwiftPackageReference "braze-ios-sdk" */;
+			productName = AppboyKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A77DCAB426FD45DB005FC7BD /* Project object */;
 }
